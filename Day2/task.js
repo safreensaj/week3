@@ -96,16 +96,10 @@ function createPerson(name) {
 const p = createPerson("Sam");
 p.greet();
 
-//Generator Function
-
-//A Generator Function is a special type of function that can pause and continue later.
-//It uses
-//function* keyword (star symbol *)
-//and the yield keyword to pause the function.
 
 //Function Currying
 
-//Currying means breaking a function with many argumentsinto many smaller functions,each taking one argument at a time.
+//Currying means breaking a function with many arguments into many smaller functions,each taking one argument at a time.
 // It’s like giving the arguments step by step.
 function add(a) {
   return function(b) {
@@ -116,23 +110,6 @@ function add(a) {
 }
 console.log(add(2)(3)(4)); 
 
-//Memoization 
-
-/*When we calculate something once,
-we save that answer.
-Next time, if we get the same question,
-we don’t calculate again — we just remember and use the saved answer.
- Example in Real Life:
-
-Imagine you ask your calculator:
-
-You: “What’s 10 + 20?”
-→ It says “30” (it had to calculate).
-
-You ask again “What’s 10 + 20?”
-→ It already knows the answer “30” (no need to calculate again).
-
-That’s called Memoization — remembering old answers */
 
 /*Lexical Scope vs Dynamic Scope
 
