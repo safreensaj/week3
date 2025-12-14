@@ -1,53 +1,51 @@
 // 4.type convertion?
+//two types
 //Implicit(type coercion): it automatically converts types.....example: "5" + 1 = "51"
 let result = "5"+2;    //"52" (string)
 //Explicit:Developer manually converts types using functions....example: number("5")+1=6
 let num = Number("5"); //5
 let str = String(10);  //"10"
-//5.Falsy values in js
-//values considerd false in boolean 
-//context:false, 0, " " (empty String), null, undefined, NaN
-if(0){
-    console.log("True");
-}else{
-    console.log("False");  //run
-}
-
-//javaScript operators
-// Arithmetic: +, -, *, /, %
-let x = 5;
-let y = 2;
-console.log(x+y) //7
-console.log(x%y) //1
-// comparison: >, <, ==, ===
-console.log(5=="5"); //true
-console.log(5==="5"); //false)
-// logical: &&, ||, !
-let a = true;
-let b = false;
-console.log(a && b); //false
-console.log(a||b); //true
-// ternary operator: condition ? valueiftrue : valuefalse
-//Syntax: condition ? valueiftrue : valueiffalse
-let age = 18;
-let resul = (age>=18) ? "Adult" : "Minor"; //Adult
-// typeof: to check datatype
-let name = "sam";
-let ag = 30
-console.log(typeof name); //string
-console.log(typeof ag) //number
-// nullish: coalescing(??) returns right side only if left side is null or undefined
-let username = null;
-let displayName = username ?? "Guest";
-console.log(displayName); //"Guest"
-//difference between || and ??
-// ||:check for falsy values
-// ??:checks only for null or undefined
-console.log(0 || 10); //10
-console.log(0 ?? 10)  //0
-//difference between == and ===
-// ==:checks value only(performs type conversion)
-// ===:checks value and type both
+//Number() converts a value into a number type.
+//If conversion fails, it returns NaN.
+//Number() is used to convert other data types into number.
+let a = Number("5");
+let b = Number("10");
+console.log(a + b); // 15
+//Memory Tricks
+//Number() → strict (pure number only)
+//Letters present → NaN
+//Empty string → 0
+//true → 1, false → 0
+//Number() wants the entire value to be numeric
+//If even one letter exists → NaN
+Number("5a")  // NaN
+//parseInt() is a JavaScript function used to convert a string into a whole number (integer).
+//It removes the decimal part and stops reading when it sees a non-number character.
+parseInt("10")      // 10
+parseInt("10.9")    // 10
+parseInt("25")      // 25
+//Decimal part is cut off, not rounded.
+parseInt("px10")    // NaN
+parseInt("abc")     // NaN
+//First character must be a number.
+parseInt("   30")   // 30
+//Leading spaces are ignored.
+parseInt("")        // NaN
+//parseInt() → whole numbers only
+//Cuts decimal part
+//Reads until text appears
+//First character must be a number
+//parseFloat()
+//String → Decimal number
+parseFloat("10.75")  // 10.75
+parseFloat("5.5kg")  // 5.5
+//String Concatenation using +
+"5" + 2   // "52"
+"5" - 2   // 3
+//works only with numbers
+//"5" is converted to number automatically
+//+ → concatenation if string exists
+//- * / → numeric calculation
 
 // 7.conditional statements?
 // used for decision making...if, else, if, else, switch
