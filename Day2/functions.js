@@ -20,7 +20,7 @@ const square = (x) => x * x;
 console.log(square(5)); 
 
 //4) Anonymous Function
-
+//Usually used as arguments
 //Function without a name.Used inside another function.
 setTimeout(function() {
   console.log("Hello!");
@@ -31,6 +31,7 @@ setTimeout(function() {
 /*A function expression with a name.
 //It means a function has a name, but it is stored inside a variable.
 That name is used only inside the function (for example, when you want to call itself — recursion).*/
+//Useful for debugging
 const sayHi = function greet() {
   console.log("Hello!");
 };
