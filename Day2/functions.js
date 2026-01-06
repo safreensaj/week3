@@ -5,6 +5,13 @@ function add(a, b) {
 }
 console.log(add(2, 3)); 
 
+//Parameter vs Argument
+//Parameter → variable inside function
+//Argument → value we pass to function
+
+//Purpose of return
+//return sends the result back from a function.
+
 //Function Expression
 
 //Function stored inside a variable.
@@ -132,4 +139,18 @@ function outer() {
   inner();
 }
 outer();
+//What is function hoisting?
+//Function declarations are moved to the top during execution — so you can call them before they are defined.
+sayHello();  // works
 
+function sayHello() {
+  console.log("Hi");
+}
+//Function expressions and arrow functions are NOT hoisted.
+//What is an IIFE? Why is it used?
+//IIFE = Immediately Invoked Function Expression
+//It runs immediately when defined.
+
+(function () {
+  console.log("IIFE running");
+})();
