@@ -31,3 +31,12 @@ numPattern.test("123"); // true
 /*1 capital letter
 1 number
 minimum 6 characters*/
+
+let email = "user@gmail.com";
+let pattern1 = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if (pattern1.test(email)) {
+  console.log("Valid Email");
+} else {
+  console.log("Invalid Email");
+}
+
